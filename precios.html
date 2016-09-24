@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Precios de tus mejores guitarras !</title>
+	<meta charset="utf-8">
+	<link href="https://fonts.googleapis.com/css?family=Montserrat|Allerta" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="css/invie.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"/>
+	<style type="text/css">
+		
+	</style>
+</head>
+<body class="precios">
+	<header id="header" style="" class="header background"><!-- header -->
+		<div class="contenedor">
+			<figure class="logotipo"><!-- logotipo -->
+			<img src="images/invie.png" width="186" height="60" alt="Invite logotipo">
+		</figure>
+		<span class="burger-button icon-menu" id="burger-button"></span>
+		<nav class="menu" id="menu"><!-- menu -->
+			<ul>
+				<li>
+					<a href="index.html"> Home</a>
+				</li>
+				<li>
+					<a href="index.html#guitarras"> Guitarras</a>
+				</li>
+				<li>
+					<a href="precios.html"> Precios</a>
+				</li>
+			</ul>
+		</nav>	
+		</div>
+	</header>
+	<section class="tabla">
+		<div class="contenedor">
+		<table>
+			<thead>
+				<tr>
+					<th>Modelo</th>
+					<th>Precio</th>
+					<th>Descripción</th>
+					<th>Modelo</th>
+					<th>Precio</th>
+					<th>Descripción</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>Invie Classic</td>
+					<td>$1000</td>
+					<td>Una guitarra muy pro</td>
+					<td>Invie Classic</td>
+					<td>$1000</td>
+					<td>Una guitarra muy pro</td>
+				</tr>
+				<tr>
+					<td>Invie Classic</td>
+					<td>$1000</td>
+					<td>Una guitarra muy pro</td>
+					<td>Invie Classic</td>
+					<td>$1000</td>
+					<td>Una guitarra muy pro</td>
+				</tr>
+				<tr>
+					<td>Invie Classic</td>
+					<td>$1000</td>
+					<td>Una guitarra muy pro</td>
+					<td>Invie Classic</td>
+					<td>$1000</td>
+					<td>Una guitarra muy pro</td>
+				</tr>
+			</tbody>
+		</table>
+		</div>
+	</section>
+	<footer class="footer">
+			<div class="contenedor">
+				<div class="contacto">
+					<img src="images/invie-white.png" alt="logotipo blanco">
+					<a href="tel:+51956314857"><strong>Telefono: </strong><span>956314857</span></a>
+					<a href="mailto:contacto@gigpz.com"><strong>E-mail: </strong><span>contacto@gigpz.com</span></a>
+				</div>
+				<form class="formulario">
+					<div class="col1">
+						<label for="nombre">Nombre</label>
+						<input type="text"  required  id="nombre" name="nombre" placeholder="" />
+						<label for="email">Email</label>
+						<input type="email" required name="email" id="email">
+						<div class="sexo">
+							<label for="mujer">
+								<input type="radio" id="mujer" name="sexo" value="mujer"> mujer
+							</label>
+							<label for="hombre">
+								<input type="radio" id="hombre" name="sexo" value="hombre"> hombre
+							</label>
+						</div>
+						<div class="intereses">
+							<label for="cotizacion">
+								<input type="checkbox" id="cotizacion" checked name="intereses" value="contizacion"> Cotización
+							</label>
+							<label for="reclamos">
+								<input type="checkbox" id="reclamos" name="intereses" value="reclamos"> Reclamos
+							</label>
+							<label for="comentarios">
+								<input type="checkbox" id="comentarios" name="intereses" value="comentarios"> Comentarios
+							</label>
+							<label for="otros">
+								<input type="checkbox" id="otros" name="intereses" value="otros"> Otros
+							</label>
+						</div>
+					</div>
+					<div class="col2">
+						<label for="comentarios">Comentarios</label>
+						<textarea name="comentarios" id="comentarios" cols="30" rows="10"></textarea>
+						<input type="submit" name="" value="Enviar" class="button" />
+					</div>
+				</form>
+					
+			</div>
+		</footer>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/blazy/1.6.2/blazy.min.js"></script>
+		<script>
+			
+			var consulta = window.matchMedia('(max-width: 800px)');
+			consulta.addListener(mediaQuery);
+
+			var $burgerButton = document.getElementById('burger-button');
+			var $menu = document.getElementById('menu');
+			function toggleMenu(){
+				$menu.classList.toggle('active');
+			}
+
+			function mediaQuery(){
+					if (consulta.matches) {
+					console.log('se cumplio la condición');
+					$burgerButton.addEventListener('touchstart', toggleMenu);
+				} else {
+					$burgerButton.addEventListener('touchstart', toggleMenu);
+					console.log('NO se cumplio la condición');
+				}	
+			}
+			mediaQuery();
+			//$burgerButton.addEventListener('click',function(){
+			/*$burgerButton.addEventListener('touchstart',function(){
+				//$menu.classList.add('active');
+				//$menu.classList.remove('active');
+				$menu.classList.toggle('active');
+			});*/
+			
+			////////////////////////////////////////////////////////////////////////////////
+			//lazy loading de img//
+			//be lazy.js//
+			//https://cdnjs.com/
+			var bLazy = new Blazy({
+    		selector:'img'
+			});
+		</script>
+</body>
+</html>
