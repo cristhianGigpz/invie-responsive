@@ -52,7 +52,7 @@ body{
 .contenedor{
 	max-width: 800px;
 	margin: auto;
-	position: relative;	
+	position: relative;
 }
 
 .background{
@@ -143,7 +143,7 @@ input:focus, textarea:focus{
 	color: white;
 	padding: 20px;
 	height: 500px;
-	
+
 }
 .portada button{
 	margin-bottom: 70px;
@@ -194,13 +194,13 @@ input:focus, textarea:focus{
 .derecha{
 	float: right;
 	position: relative;
-	top: -127px; /*bottom: 127*/
+	top: -105px; /*bottom: 127*/
 
 }
 .izquierda{
 	float: left;
 	position: relative;
-	
+
 }
 
 .contenedor-guitarra-a{
@@ -374,7 +374,7 @@ input:focus, textarea:focus{
 		margin: 0;
 	}
 	.contenedor-guitarra-a{
-		padding: 0;	
+		padding: 0;
 	}
 	/*guitarras*/
 }
@@ -527,6 +527,9 @@ input:focus, textarea:focus{
 	.col2{
 		align-items: stretch;
 	}
+  .derecha{
+    top: 15px;
+  }
 	/*footer*/
 }
 
