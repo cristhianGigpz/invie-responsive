@@ -1,0 +1,111 @@
+body{
+
+}
+.contenedor{
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+header{
+  display: flex;
+  justify-content: space-between;
+  background: #273b47;
+  color: white;
+  align-items: center;
+  position: relative;
+  height: 50px;
+}
+header > *, .portada > * {
+  /*border: 1px solid red;*/
+}
+.portada{
+  display: flex;
+}
+.col1{
+  width: 70%;
+  /*position: relative;*/
+  /* top: 0;  */
+  margin-top: 0;
+  background: lightblue;
+  transition: .5s;
+}
+.col2{
+  width: 30%;
+  position: relative;
+  top: 0;
+  left: 0;
+  transition: .5s;
+}
+
+.logo{
+  width: 40%;
+}
+.menu, .banner{
+  width: 30%;
+}
+.menu{
+  position: absolute;
+  left: 70%;
+  transition: .5s;
+  height: 50px;
+  background: purple;
+}
+.banner{
+  background: lightgray;
+  color:black;
+  transition: .5s;
+  position: absolute;
+  left: 40%;
+  top: 0;
+  height: 50px;
+}
+@media screen and (max-width: 768px){
+  .banner{
+    left: 70%;
+    top: 50px;
+  }
+  .col2{
+    top: 50px;
+  }
+}
+
+@media screen and (max-width: 600px){
+  .menu{
+    left: 0;
+    top: 50px;
+    width: 70%;
+  }
+  .col1{
+    margin-top: 50px;
+  }
+}
+
+@media screen and (max-width: 480px){
+  .col1{
+    margin-top: 100px;
+  }
+  /*.banner{
+    top: 100px;
+    left: -40%;
+    width: 70%;
+  }*/
+  .menu{
+    width: 100%;
+  }
+  .banner{
+    top: 100px;
+    left: 0;
+    width: 100%;
+  }
+  .portada{
+    display: block;
+
+  }
+  .col1{
+    width: auto;
+  }
+  .col2{
+    width: auto;
+    top: 0;
+  }
+}
